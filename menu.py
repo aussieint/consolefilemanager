@@ -58,7 +58,17 @@ while True:
     elif choice == '7':
         print('Операционная система ', sys.platform)
     elif choice == '8':
-        pass
+        with open('listdir.txt', 'w') as f:
+            f.write('files: ')
+            for file in os.listdir():
+                if os.path.isfile(file):
+                    f.write(file + ' ')
+            f.write('\ndirs:')
+            for dir in os.listdir():
+                if os.path.isdir(dir):
+                    f.write(dir + ' ')
+
+
     elif choice == '9':
         victory()
     elif choice == '10':
