@@ -44,16 +44,13 @@ while True:
     elif choice == '4':
         print("Текущая директория:", os.getcwd())
     elif choice == '5':
-        dir_list = []
-        for dir in os.listdir():
-            if os.path.isdir(dir):
-                dir_list.append(dir)
+        dir_list = [dir for dir in os.listdir() if os.path.isdir(dir)]
         print(dir_list)
     elif choice == '6':
-        file_list = []
-        for file in os.listdir():
-            if os.path.isfile(file):
-                file_list.append(file)
+        file_list = [file for file in os.listdir() if os.path.isfile(file)]
+        # for file in os.listdir():
+        #     if os.path.isfile(file):
+        #         file_list.append(file)
         print(file_list)
     elif choice == '7':
         print('Операционная система ', sys.platform)
