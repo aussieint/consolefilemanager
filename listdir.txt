@@ -1,0 +1,2 @@
+files: balans.txt bank.py listdir.txt menu.py orders.json orders.txt qw.txt victory.py 
+dirs:.git .idea .pytest_cache venv venv1 __pycache__ 
